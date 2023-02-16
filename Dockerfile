@@ -6,7 +6,8 @@ RUN tar -zxvf hugo.tar.gz && \
     apk add --no-cache git
 WORKDIR /app
 COPY . .
-RUN git submodule update --init 
+RUN git submodule update --init && \
+    /hugo --minify --enableGitInfo
 
 FROM nginx:1.23-alpine
 WORKDIR /usr/share/nginx/html
