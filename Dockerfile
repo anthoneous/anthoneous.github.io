@@ -1,6 +1,6 @@
 FROM alpine:3.17.1 AS builder
-ARG VERSION=0.109.0
-ADD https://github.com/gohugoio/hugo/releases/download/v${VERSION}/hugo_${VERSION}_linux-amd64.tar.gz /hugo.tar.gz
+ARG VERSION=0.110.0
+ADD https://github.com/gohugoio/hugo/releases/download/v${VERSION}/hugo_extended_${VERSION}_linux-arm64.tar.gz /hugo.tar.gz
 RUN tar -zxvf hugo.tar.gz && \
     rm -rf hugo.tar.gz && \
     apk add --no-cache git
