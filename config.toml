@@ -1,4 +1,4 @@
 baseURL = 'https://anthoneous.github.io'
 languageCode = 'en-us'
-title = 'Anthonys Blog'
+title = "Anthony's Blog"
 theme = "ananke"
