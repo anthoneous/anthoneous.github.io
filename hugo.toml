@@ -1,0 +1,16 @@
+baseURL = '/'
+languageCode = 'en-us'
+title = "Anthony's Blog"
+theme = "ananke"
+enableEmoji = true
+enableGitInfo = true
+
+[params]
+  description = "A blog about technology, programming, and life."
+  author = "Anthony E."
+  avatar = "img/avatar.jpg"
+  github = "https://github.com/anthoneous"
+  twitter = "https://twitter.com/anthoneous"
+
+[permalinks]
+  posts = '/:year/:month/:title/'
