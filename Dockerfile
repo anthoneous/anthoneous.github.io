@@ -1,12 +1,9 @@
-FROM alpine:3.17.1 AS builder
+FROM peaceiris/hugo:v0.110.0-mod AS builder
 ARG VERSION=0.110.0
-ADD https://github.com/gohugoio/hugo/releases/download/v0.110.0/hugo_extended_0.110.0_darwin-universal.tar.gz /hugo.tar.gz
-RUN tar -zxvf hugo.tar.gz && \
-    rm -rf hugo.tar.gz && \
-    apk add --no-cache git
+RUN apk add --no-cache git
 WORKDIR /app
 COPY . .
-RUN git submodule update --init 
+RUN git submodule update --init && hugo --minify --enableGitInfo
 
 FROM nginx:1.23-alpine
 WORKDIR /usr/share/nginx/html

@@ -1,4 +1,4 @@
-baseURL = 'https://anthoneous-github-io-anthoneous-main.pacenthink.co/'
+baseURL = '/'
 languageCode = 'en-us'
 title = "Anthony's Blog"
 theme = "ananke"
